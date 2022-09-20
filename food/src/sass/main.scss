@@ -1,0 +1,478 @@
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F9F9F9;
+  padding: 12px 40px 39px 40px;
+  @media (max-width: 620px) {
+    padding: 10px;
+  }
+  .navContainer {
+    align-items: end;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    h5 {
+      margin-right: 30px;
+      cursor: pointer;
+      font-family: 'HelveticaNeueCyr';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18px;
+      color: #212121;
+    }
+    .name{
+      display: none;
+    }
+  }
+
+  .language {
+    h6 {
+      font-family: 'HelveticaNeueCyr';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      text-transform: uppercase;
+      color: #212121;
+
+      span {
+        color: #212121;
+        opacity: 0.4;
+      }
+    }
+    .name{
+      display: none;
+    }
+  }
+    @media (max-width:620px) {
+      .logoName{
+        display: flex;
+        justify-content: center;
+      }
+      display: block;
+      img{
+        width: 90px;
+      }
+      .menu{
+        margin-top: 10px;
+        h5{
+          font-size: 14px;
+          margin-right: 10px;
+        }
+        .name{
+          display: block;
+        }
+        .form-select{
+          background-image: none;
+          padding: 3px;
+          font-size: 12px;
+          width: 25px;
+        }
+      }
+      .language{
+
+        h6{
+          display: none;
+        }
+        .name{
+          display: block;
+        }
+        .form-select{
+          background-image: none;
+          padding: 0;
+          font-size: 12px;
+        }
+      }
+    }
+}
+}
+
+
+.videoMain{
+
+  margin-bottom: 100px;
+  video{
+    width: 100%!important;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+.products{
+
+  .ours{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+    //margin-left: 40px;
+  }
+
+  .main{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 50px;
+    .image{
+      display: flex;
+      justify-content: center;
+      img{
+        width: 100%;
+      }
+
+    }
+    .description{
+      width: 70%;
+      h2{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+        color: #000000;
+
+      }
+      .date{
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        h4{
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 21px;
+         margin-left: 15px;
+          color: #000000;
+        }
+      }
+      h5{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+
+        color: #000000;
+      }
+
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ours{
+      font-size: 30px;
+    }
+    .main{
+      margin-top: 20px;
+      .description{
+        h2{
+          font-size: 20px;
+          margin-top: 30px;
+        }
+        .date{
+          h4{
+            font-size: 14px;
+          }
+        }
+        h5{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.our{
+  //text-align: center;
+  .about{
+    margin-left: 25%;
+    margin-bottom: 60px;
+    .main{
+      width: 70%;
+      .uchenie{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 45px;
+        line-height: 54px;
+        color: #000000;
+        margin-top: 140px;
+      }
+      .react-player{
+        width: 100%!important;
+
+      }
+    }
+
+    h2{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 45px;
+      line-height: 54px;
+      margin-top: 60px;
+      color: #000000;
+      //text-align: center;
+    }
+    h4{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 24px;
+      margin:20px 0 60px 0;
+      color: #000000;
+    }
+  }
+  .doctors{
+    display: flex;
+    justify-content: space-between;
+    img{
+      width: 49%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about{
+      margin: 0;
+      .main{
+        width: 100%;
+        h2{
+          font-size: 35px;
+          margin-top: 20px;
+        }
+        h4{
+          font-size: 16px;
+          margin: 20px 0;
+        }
+        .uchenie{
+          font-size: 35px;
+          margin: 40px 0 20px 0;
+        }
+        .react-player{
+          width: 100% !important;
+          height: 210px!important;
+          margin-top: 20px;
+        }
+      }
+
+
+    }
+    .doctors{
+      display: block;
+      img{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+}
+
+.blits{
+  margin-top: 40px;
+  h4{
+    width: 70%;
+    margin-left: 25%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 54px;
+    color: #000000;
+    margin-bottom: 50px;
+  }
+  .react-player{
+    width: 100%!important;
+
+
+  }
+  @media (max-width: 768px) {
+    margin-top: 0;
+    h4{
+
+      font-size: 35px;
+      margin-bottom: 0;
+    }
+    .react-player{
+      height: 210px!important;
+      margin-top: 20px;
+    }
+  }
+}
+
+.teachers{
+  .cardTeachers{
+
+    margin-bottom: 79px;
+    img{
+      width: 100%;
+      //height: 100%;
+    }
+    .about{
+      h3{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+        margin: 20px 0 12px 0;
+      }
+      h4{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #000000;
+      }
+    }
+  }
+}
+
+
+.footer{
+  background: #FAFAFA;
+  padding-left: 40px;
+  margin-top: 100px;
+  display: flex;
+  .leftAddres{
+    width: 50%;
+  }
+  .roww{
+    display: flex;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .leftFooter{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin: 170px 0;
+    .logo{
+      h6 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        color: #282828;
+        margin-top: 28px;
+      }
+    }
+    .addres{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 93px;
+      width: 100%;
+      .street{
+        margin-right: 93px;
+        h3{
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 170%;
+          color: #282828;
+        }
+        h4{
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 130%;
+          color: #282828;
+          margin-top: 10px;
+        }
+      }
+      .local{
+        h3{
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 170%;
+          color: #282828;
+        }
+        h4{
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 130%;
+          color: #282828;
+          margin-top: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .rightFooter{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    iframe{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    display: block;
+    padding: 10px;
+    .leftAddres{
+      width: 100%!important;
+      margin-left: 10px;
+      .leftFooter{
+        margin:20px 0;
+        .addres{
+          margin-top: 40px;
+        }
+        .addres{
+          .street{
+            margin-right: 40px;
+            h4{
+              font-size: 16px;
+            }
+          }
+          .local{
+            h4{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .rightFooter{
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
