@@ -35,10 +35,13 @@ h1,h2,h3,h4,h5,h6,p{
     .name{
       display: none;
     }
+    .languageMobile{
+      display: none;
+    }
   }
 
   .language {
-    h6 {
+    .lang{
       font-family: 'HelveticaNeueCyr';
       font-style: normal;
       font-weight: 400;
@@ -46,14 +49,27 @@ h1,h2,h3,h4,h5,h6,p{
       line-height: 14px;
       text-transform: uppercase;
       color: #212121;
-
-      span {
+      display: flex;
+      span{
+        margin-right: 5px;
+      }
+      .default {
         color: #212121;
         opacity: 0.4;
+        cursor: pointer;
+      }
+      .langActive{
+        color: #212121;
+        cursor: pointer;
       }
     }
     .name{
       display: none;
+
+
+
+
+
     }
   }
     @media (max-width:620px) {
@@ -80,9 +96,13 @@ h1,h2,h3,h4,h5,h6,p{
           font-size: 12px;
           width: 25px;
         }
+        .languageMobile{
+          display: block;
+          //border: none !important;
+        }
       }
       .language{
-
+        display: none;
         h6{
           display: none;
         }
@@ -407,6 +427,10 @@ h1,h2,h3,h4,h5,h6,p{
           line-height: 130%;
           color: #282828;
           margin-top: 10px;
+          a{
+            text-decoration: none;
+            color: #282828;
+          }
         }
       }
       .local{
@@ -460,6 +484,10 @@ h1,h2,h3,h4,h5,h6,p{
             margin-right: 40px;
             h4{
               font-size: 16px;
+              a{
+                text-decoration: none;
+                color: #282828;
+              }
             }
           }
           .local{

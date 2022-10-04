@@ -2,27 +2,49 @@
 import Navbar from "./components/navbar";
 import Products from "./components/products";
 import Footer from "./components/footer";
-import { BrowserRouter as Router, NavLink, Routes, Route } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    NavLink,
+    Routes,
+    Route,
+} from "react-router-dom";
 import Our from "./components/our";
-import React from "react";
+import React, {useEffect} from "react";
 import Process from "./components/process";
-
+import cookies from "js-cookie";
+import languages from "./i-18/resources";
+import { useTranslation } from "react-i18next";
 
 function App() {
-  return (
-      <Router>
-    <div className="App">
-      <Navbar/>
+    const currentLanguageCode = cookies.get("i18next") || "uz";
+    const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+    const { t } = useTranslation();
 
-        <Routes>
-                <Route path="/" element={<Products />}/>
+     // const currentLanguageCode = cookies.get("i18next")  "uz";
+    // const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+    // const { t } = useTranslation();
+    //  const { pathname } = useLocation();
+
+    useEffect(() => {
+        document.body.dir = currentLanguage.dir || "ltr";
+        document.title = t("Fm Food");
+    }, [currentLanguage, t]);
+
+    // console.log("cur",currentLanguage)
+    return (
+        <Router>
+            <div className="App">
+                <Navbar />
+
+                <Routes>
+                    <Route path="/" element={<Products />} />
                     <Route path="our" element={<Our />} />
                     <Route path="process" element={<Process />} />
-        </Routes>
-        <Footer/>
-    </div>
-      </Router>
-  );
+                </Routes>
+                <Footer />
+            </div>
+        </Router>
+    );
 }
 
 export default App;

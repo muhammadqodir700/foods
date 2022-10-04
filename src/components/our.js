@@ -23,9 +23,6 @@ const Our = () => {
                     <div className="doctors">
                         <img src={leftImg} alt=""/>
                         <img src={rightImg} alt=""/>
-
-
-
                     </div>
                     <div className="about">
                         <div className="main">
@@ -46,6 +43,7 @@ const Our = () => {
                             />
 
 
+
                             <h3 className="uchenie">Наши ученые</h3>
                         </div>
                     </div>
@@ -54,6 +52,8 @@ const Our = () => {
             </div>
 
             <Teachers/>
+
+
 
 
             <div className="row blits">

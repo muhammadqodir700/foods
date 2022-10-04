@@ -3,6 +3,7 @@ import logo from "../assets/images/Rectangle.png"
 
 const Footer = () => {
     return (
+
         <div className="footer">
             <div className="leftAddres">
             <div className="roww">
@@ -15,14 +16,14 @@ const Footer = () => {
                         <div className="addres">
                             <div className="street">
                                 <h3>Адрес</h3>
-                                <h4>ул. Знаменка, 11, Москва</h4>
+                                <h4>Тошкент шахар. Чилонзор тумани. Бунёд кучаси 14 а уй</h4>
                                 <h4>hello@fmfood.pro</h4>
-                                <h4>+ (70) 555 12 34</h4>
+                                <h4><a href="tel:+99870 555-12-34">+ (70) 555 12 34</a></h4>
                             </div>
                             <div className="local">
                                 <h3>Соцсети</h3>
                                 <h4>Facebook</h4>
-                                <h4>Twiter</h4>
+                                <h4>Twitter</h4>
                                 <h4>Instagram</h4>
                             </div>
                         </div>
