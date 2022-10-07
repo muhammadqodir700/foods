@@ -13,13 +13,17 @@ const Footer = () => {
                             <img src={logo} alt=""/>
                             <h6>Funksional oziq-ovqat</h6>
                         </div>
+
                         <div className="addres">
                             <div className="street">
                                 <h3>Адрес</h3>
                                 <h4>Тошкент шахар. Чилонзор тумани. Бунёд кучаси 14 а уй</h4>
                                 <h4>hello@fmfood.pro</h4>
-                                <h4><a href="tel:+99870 555-12-34">+ (70) 555 12 34</a></h4>
+                                <h4><a href="tel:+998 71 203 11 13">+ (71) 203 11 13</a></h4>
                             </div>
+
+
+
                             <div className="local">
                                 <h3>Соцсети</h3>
                                 <h4>Facebook</h4>

@@ -15,12 +15,12 @@ import { useTranslation } from "react-i18next";
 const Products = () => {
     const { t } = useTranslation();
     const data = [
-        {id:1,image:yayratan, name:t("pdName_1"),icon:stz,date:"Ts 309245313-001:2022",desc:t("desc_1")},
-        {id:1,image:pecheni,name:t("pdName_2"),icon:stz,date:"Ts 309245313-003:2022",desc:t("desc_2")},
-        {id:1,image:bugdoy,name:t("pdName_3"),icon:stz,date:"Ts 27160335-002:2019,MTR.008-2017",desc:t("desc_3")},
-        {id:1,image:kunjut,name:t("pdName_4"),icon:stz,date:"Ts 27160335-002:2019,MTR.008-2017",desc:t("desc_4")},
-        {id:1,image:bugdoyJavdar,name:t("pdName_5"),icon:stz,date:"Ts 27160335-002:2019,MTR.008-2017",desc:t("desc_5")},
-        {id:1,image:zogora,name:t("pdName_6"),icon:stz,date:"Ts 27160335-002:2019,MTR.008-2017",desc:t("desc_6")},
+        {id:1,image:yayratan, name:t("pdName_1"),icon:stz,date:"Ts 309245313-001:2022",desc:t("desc_1"),rec:t("recomend_1"),glicemic:t("glink_1"),notRecomend:t("notRecomend_1")},
+        {id:1,image:pecheni,name:t("pdName_2"),icon:stz,date:"Ts 309245313-003:2022",desc:t("desc_2"),rec:t("recomend_2"),glicemic:t("glink_2"),notRecomend:t("notRecomend_2")},
+        {id:1,image:bugdoy,name:t("pdName_3"),icon:stz,date:"Ts 27160335-002:2019,MTR.008-2017",desc:t("desc_3"),rec:t("recomend_3"),glicemic:t("glink_3"),notRecomend:t("notRecomend_3")},
+        {id:1,image:kunjut,name:t("pdName_4"),icon:stz,date:"Ts 27160335-002:2019,MTR.008-2017",desc:t("desc_4"),rec:t("recomend_4"),glicemic:t("glink_4"),notRecomend:t("notRecomend_4")},
+        {id:1,image:bugdoyJavdar,name:t("pdName_5"),icon:stz,date:"Ts 27160335-002:2019,MTR.008-2017",desc:t("desc_5"),rec:t("recomend_5"),glicemic:t("glink_5"),notRecomend:t("notRecomend_5")},
+        {id:1,image:zogora,name:t("pdName_6"),icon:stz,date:"Ts 27160335-002:2019,MTR.008-2017",desc:t("desc_6"),rec:t("recomend_6"),glicemic:t("glink_6"),notRecomend:t("notRecomend_6")},
     ];
 
     const videoEl = useRef(null);
@@ -60,7 +60,7 @@ const Products = () => {
             {
                 data.map((item ,index ) => {
                    return <div key={index} className="row main">
-                       <div className="col-lg-4 col-md-6col-12 image">
+                       <div className="col-lg-4 col-md-6 col-12 image">
                            <img src={item.image} alt=""/>
                        </div>
                        <div className="col-lg-8 col-md-6  col-12">
@@ -70,7 +70,10 @@ const Products = () => {
                                    <img src={item.icon} alt=""/>
                                    <h4>{item.date}</h4>
                                </div>
+                               <h5><span>{t("recomended")}</span> {item.rec} </h5>
                                <h5>{item.desc}</h5>
+                               <h5 className="mt-3 mb-3">{item.glicemic}</h5>
+                               <h5><span>{item.notRecomend}</span></h5>
 
                            </div>
                        </div>

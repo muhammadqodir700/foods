@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import logo from "../assets/images/Rectangle.png";
 import { NavLink } from "react-router-dom";
 import Our from "./our";
@@ -6,17 +6,16 @@ import languages from "../i-18/resources";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import cookies from "js-cookie";
+import LanguageDetector from "i18next-browser-languagedetector";
 const Navbar = () => {
 
 
-    const currentLanguageCode = cookies.get("i18next") || "uz";
-    const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
 
-    const [active, setActive] = useState("Продукты");
-    const [id, setid] = useState(100);
-       // console.log('//',cookies.get("i18next"))
+    const [active, setActive] = useState(window.location.pathname);
+    const [id, setid] = useState(i18next.language);
 
     const { t } = useTranslation();
+    // console.log('...',active)
     return (
         <div className="navbar">
             <div className="container navContainer">
@@ -27,12 +26,12 @@ const Navbar = () => {
                     <NavLink
                         to="/"
                         onClick={() => {
-                            setActive("Продукты");
+                            setActive("/");
                         }}
                     >
                         <h5
 
-                            className={active === "Продукты" ? "text-success" : "text-dark"}
+                            className={active === "/" ? "text-success" : "text-dark"}
                         >
                             {t("nav_1")}
                         </h5>
@@ -40,20 +39,20 @@ const Navbar = () => {
                     <NavLink
                         to="our"
                         onClick={() => {
-                            setActive("О нас");
+                            setActive("/our");
                         }}
                     >
-                        <h5 className={active === "О нас" ? "text-success" : "text-black"}>
+                        <h5 className={active === "/our" ? "text-success" : "text-black"}>
                             {t("nav_2")}
                         </h5>
                     </NavLink>
                     <NavLink
                         to="process"
                         onClick={() => {
-                            setActive("Процесс");
+                            setActive("/process");
                         }}
                     >
-                        <h5 className={active === "Процесс" ? "text-success" : "text-dark"}>
+                        <h5 className={active === "/process" ? "text-success" : "text-dark"}>
                             {t("nav_3")}
                         </h5>
                     </NavLink>
@@ -82,7 +81,7 @@ const Navbar = () => {
 
 
                             <div key={index} onClick={() => i18next.changeLanguage(lang.code)} >
-                <span onClick={() => {setid(lang.id)}} className={id === lang.id ? "langActive" : "default"}> {lang.name === "O'z"  ? "" : "/"} {lang.name}</span>
+                <span onClick={() => {setid(lang.code)}} className={id === lang.code ? "langActive" : "default"}> {lang.name === "O'z"  ? "" : "/"} {lang.name}</span>
               </div>
                         ))}
                     </div>
